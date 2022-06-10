@@ -10,19 +10,17 @@ from utils.utils import get_message_img
 
 # 真寻规范
 __zx_plugin_name__ = "消息防撤回"
-__plugin_usage = """
-                    usage：
-                    消息防撤回：
-                    当消息被撤回或收到闪照时自动触发；
-                    将撤回的消息/闪照发送给超级用户；
-                    ————麻麻再也不怕我错过群里的女装照片了！
-                """.strip()
+__plugin_usage__ = """
+usage：
+    消息防撤回：
+    当消息被撤回或收到闪照时自动触发；
+    将撤回的消息/闪照发送给超级用户；
+    ————麻麻再也不怕我错过群里的女装照片了！
+""".strip()
 __plugin_des__ = "保存撤回的消息，收到闪照时，将闪照发送给超级用户"
-__plugin_cmd__ = []
 __plugin_settings__ = {
-    "level": "1",
-    "default_status": True,
     "limit_superuser": True,
+    "cmd": ["防撤回", "闪照解析"],
 }
 __plugin_type__ = ("常规插件",)
 __plugin_version__ = 0.1
